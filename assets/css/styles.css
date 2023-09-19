@@ -1,22 +1,37 @@
+/* Sets the placement and width of the NavBar */
+.hero {
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+    height: 150px;
+}
+
 /* Styles the text in the header */
-.title {
-    font-size: 100px;
+#name {
+    font-size: 65px;
+    float: none;
+    position: absolute;
+    top: 20%;
+    left: 35%;
 }
 
-/* Trying to set NavBar flush against the right margin */
-.navbar {
-    padding: 0;
-    margin: 0;
+/* Styles the text that informs the user */
+#instruction {
+    font-size: 30px;
 }
 
-/* Styles the NavBar */
-.subtitle {
-    width: 700px;
-    height: 20px;
-}
+/* Trying to reduce the top margin of the input form in relation to the NavBar */
+/* .field {
+    margin-top: 0px;
+} */
 
+/* Styles the input forms */
 #input-form {
     margin-top: 70px;
+}
+
+.input {
+    height: 20px;
 }
 
 /* Sets the width of the input boxes */
@@ -29,7 +44,7 @@
     margin-top: 5px;
 }
 
+/* Sets the bottom margin */
 #first-button {
     margin-bottom: 10px;
 }
-
