@@ -1,9 +1,15 @@
+/* Styles the main section of the webpage */
+main {
+    background-color: rgb(7, 41, 68);
+}
 /* Sets the placement and width of the NavBar */
 .hero {
     width: 100%;
     margin-left: 0px;
     padding-left: 0px;
     height: 150px;
+    /* Leaving the box-shadow creates the grey line between the NavBar and the main section of the webpage. Thoughts? */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 /* Styles the text in the header */
@@ -13,25 +19,25 @@
     position: absolute;
     top: 20%;
     left: 35%;
+    color: rgb(26, 26, 26)
 }
 
 /* Styles the text that informs the user */
 #instruction {
     font-size: 30px;
+    margin-left: 12px;
+    color: rgb(206, 231, 65);
 }
-
-/* Trying to reduce the top margin of the input form in relation to the NavBar */
-/* .field {
-    margin-top: 0px;
-} */
 
 /* Styles the input forms */
 #input-form {
-    margin-top: 70px;
-}
+    margin-top: 10px;
+} 
 
-.input {
-    height: 20px;
+#first-button, 
+#second-button, 
+#third-button {
+    background-color: rgb(143, 209, 79);
 }
 
 /* Sets the width of the input boxes */
@@ -45,6 +51,8 @@
 }
 
 /* Sets the bottom margin */
-#first-button {
+#first-button,
+#second-button,
+#third-button {
     margin-bottom: 10px;
 }
