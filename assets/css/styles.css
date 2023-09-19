@@ -1,3 +1,35 @@
-/* .label {
-    margin-top: 20px;
-} */
+/* Styles the text in the header */
+.title {
+    font-size: 100px;
+}
+
+/* Trying to set NavBar flush against the right margin */
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles the NavBar */
+.subtitle {
+    width: 700px;
+    height: 20px;
+}
+
+#input-form {
+    margin-top: 70px;
+}
+
+/* Sets the width of the input boxes */
+.control {
+    width: 15%;
+}
+
+/* Sets space between the input boxes and the buttons */
+.button {
+    margin-top: 5px;
+}
+
+#first-button {
+    margin-bottom: 10px;
+}
+
