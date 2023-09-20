@@ -2,9 +2,9 @@
 const submitBtnOne = document.querySelector('#first-button');
 
 /*
-var userLon = document.querySelector("#lon-input")
-var userLat = document.querySelector("#lat-input")
-var userCity = document.querySelector("#city-input")
+const userLon = document.querySelector("#lon-input")
+const userLat = document.querySelector("#lat-input")
+const userCity = document.querySelector("#city-input")
 */
 // Gas API 
 var data = null;
@@ -25,6 +25,56 @@ xhr.setRequestHeader("authorization", "apikey 6Ryvzp1sKQ7LW1sRGmM83U:23lcJdTMB1e
 
 xhr.send(data);
 
+// Google Maps API 
+let map;
+let service;
+let infowindow;
+
+function initMap() {
+  //const userInput = new google.maps.LatLng({userLat}, {userLon});
+  const userInput = new google.maps.LatLng(30.266666, -97.733330);
+  // Set Austin as test center
+
+  infowindow = new google.maps.InfoWindow();
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: userInput,
+    zoom: 15,
+  });
+
+  // unfinished request that will set markers for gas stations in the area 
+/*
+  const request = {
+    query: "Gas station",
+    fields: ["name"],
+  };
+*/
+  service = new google.maps.places.PlacesService(map);
+  service.findPlaceFromQuery(request, (results, status) => {
+    if (status === google.maps.places.PlacesServiceStatus.OK && results) {
+      for (let i = 0; i < results.length; i++) {
+        createMarker(results[i]);
+      }
+
+      map.setCenter(results[0].geometry.location);
+    }
+  });
+}
+
+function createMarker(place) {
+  if (!place.geometry || !place.geometry.location) return;
+
+  const marker = new google.maps.Marker({
+    map,
+    position: place.geometry.location,
+  });
+
+  google.maps.event.addListener(marker, "click", () => {
+    infowindow.setContent(place.name || "");
+    infowindow.open(map);
+  });
+}
+
+window.initMap = initMap;
 //
 
 // render city search text (ie. Austin)
