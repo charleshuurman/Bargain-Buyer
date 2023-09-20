@@ -1,9 +1,5 @@
 # Gas Station Locator Web App
 
-## Description
-
-The "Gas Station Locator Web App" is designed to assist users in finding gas stations, along with the current gas prices. 
-
 ## User Story
 
 - AS A traveler on the road
@@ -23,6 +19,10 @@ The "Gas Station Locator Web App" is designed to assist users in finding gas sta
 - THEN I find it is deployed on GitHub Pages, has a clean repository that meets quality coding standards, and stores persistent data on the client side.
 - WHEN I view the README
 - THEN I find a unique name, a description, technologies used, a screenshot, and a link to the deployed application.
+
+## Description
+
+The "Gas Station Locator Web App" is designed to assist users in finding gas stations, along with the current gas prices. 
 
 - **Motivation**: The constant changes of gas prices and the necessity of finding gas stations in unfamiliar areas motivated us to create this user-friendly app.
 - **Purpose**: We built this application to provide users with an easy and efficient way to locate gas stations and get the most up-to-date pricing information.
