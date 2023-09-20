@@ -12,8 +12,12 @@
 <body>
   <!-- NavBar -->
     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-        <!-- <a class="navbar-item">
-        </a> -->
+      <a class=“navbar-item”>
+        <img src=“https://bulma.io/images/bulma-logo.png”
+         alt=“Bulma: Free, open source, and modern CSS framework based on Flexbox”
+         width="112" height=“28”>
+       </a>
+
       <section class="hero is-primary">
         <div class="hero-body">
           <p class="title">
@@ -31,23 +35,39 @@
       <div class="field">
         <label class="label" id="instruction">Find nearby gas:</label>
         <div class="control" >
-          <input class="input" type="text" placeholder="Enter City Name">
+          <input class="city-input" type="text" placeholder="Enter City Name">
           <button class="button is-link" id="first-button">Submit</button>
-          <input class="input" type="text" placeholder="Enter Longitude">
+          <input class="lon-input" type="text" placeholder="Enter Longitude">
           <button class="button is-link" id="second-button">Submit</button>
-          <input class="input" type="text" placeholder="Enter Latitude">
+          <input class="lat-input" type="text" placeholder="Enter Latitude">
           <button class="button is-link" id="third-button">Submit</button>
+        </div> 
+
+        
+      <!-- Card for the Results-->
+      <div class="card">
+        <!-- ID for the gas stations result that will be created with JS -->
+          <div id="gasoline-text" class="media-content">
+             <p class="gasoline-text">Gasoline Price</p>
+          </div>
+  
+        <!-- ID for the gas prices result that will be created with JS -->
+        <div id="gas-results" class="gas-results">
+          <p> $3.59 <!--placeholder--></p>
+        </div>
+          
+          <div class="save-btn">
+            <footer class="save-btn">
+              <a href="#" class="card-footer-item">Save</a>
+            </footer>
+          </div>
         </div>
       </div>
       </section>
+
     </main>
 
       <!-- ID for the map that will be created with JS -->
       <div id="map-result"></div>
-      <!-- ID for the gas stations result that will be created with JS -->
-      <div id="gas-stations"></div>
-      <!-- ID for the gas prices result that will be created with JS -->
-      <div id="gas-prices"></div>
-      <script src="./assets/js/script.js"></script>
 </body>
 </html>

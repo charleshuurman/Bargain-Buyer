@@ -56,3 +56,15 @@ main {
 #third-button {
     margin-bottom: 10px;
 }
+
+.card {
+    align-items: right;
+}
+
+#gasoline-text {
+ background-color: rgb(63, 126, 0)
+}
+
+#gas-results {
+    background-color: grey;
+}
