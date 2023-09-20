@@ -27,12 +27,18 @@ xhr.send(data);
 
 //
 
+// render city search text (ie. Austin)
+function renderCityText() {
+  let userCity = JSON.parse(localStorage.getItem('userCitySearch'));
+  let citySearchList = 
+}
 // Local Storage
-
 // event listener
 document.getElementById('first-button').addEventListener('click', function (event) {
-  // event.preventDefault();
+  event.preventDefault();
   console.log("click");
+
+  // var citySearch = document.getElementById('city-search').value;
 }) 
 
 
