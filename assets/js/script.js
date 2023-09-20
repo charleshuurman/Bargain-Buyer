@@ -1,3 +1,6 @@
+// Accessing Elements by ID
+const submitBtnOne = document.querySelector('#first-button');
+
 /*
 var userLon = document.querySelector("#lon-input")
 var userLat = document.querySelector("#lat-input")
@@ -16,10 +19,20 @@ xhr.addEventListener("readystatechange", function () {
 
 // Set coordinates for Houston for test, lon and lat to be filled with user variables
 //xhr.open("GET", "https://api.collectapi.com/gasPrice/fromCoordinates?lng={userLon}&lat={userLat}");
-//xhr.open("GET", "https://api.collectapi.com/gasPrice/fromCoordinates?lng=-95.358421&lat=29.749907");
+xhr.open("GET", "https://api.collectapi.com/gasPrice/fromCoordinates?lng=-95.358421&lat=29.749907");
 xhr.setRequestHeader("content-type", "application/json");
 xhr.setRequestHeader("authorization", "apikey 6Ryvzp1sKQ7LW1sRGmM83U:23lcJdTMB1ecR7DuwNxQ5A");
 
 xhr.send(data);
 
 //
+
+// Local Storage
+
+// event listener
+document.getElementById('first-button').addEventListener('click', function (event) {
+  // event.preventDefault();
+  console.log("click");
+}) 
+
+
