@@ -1,6 +1,3 @@
-// Accessing Elements by ID
-const submitBtnOne = document.querySelector('#first-button');
-
 /*
 const userLon = document.querySelector("#lon-input")
 const userLat = document.querySelector("#lat-input")
@@ -77,18 +74,77 @@ function createMarker(place) {
 window.initMap = initMap;
 //
 
-// render city search text (ie. Austin)
-function renderCityText() {
-  let userCity = JSON.parse(localStorage.getItem('userCitySearch'));
-  let citySearchList = 
-}
-// Local Storage
-// event listener
-document.getElementById('first-button').addEventListener('click', function (event) {
-  event.preventDefault();
-  console.log("click");
+// function to render user input
+const button = document.querySelector('#first-button');
 
-  // var citySearch = document.getElementById('city-search').value;
-}) 
+function renderUserInput() {
+  let citySearchInput = JSON.parse(localStorage.getItem('citySearch'));
+  let cityHistory = document.getElementById('user-city');
+
+  if (citySearchInput !== null) {
+    cityHistory.innerHTML = '';
+
+    citySearchInput.forEach(function (citySearch) {
+      let cityItem = document.createElement('p');
+      cityItem.textContent = citySearch.citySearch;
+      cityHistory.appendChild(cityItem);
+    });
+  } 
+}
+
+// Local Storage
+window.onload = function() {
+  if (localStorage) {
+    let buttons = document.querySelectorAll('button');
+    // event listener
+    for (i of buttons) {
+      i.addEventListener('click', function(event) {
+        event.preventDefault();
+      console.log("button");
+      let city = document.getElementById('city').value;
+      let citySearchInput = JSON.parse(localStorage.getItem('citySearch')) || [];
+      citySearchInput.push(city);
+      localStorage.setItem('citySearch', JSON.stringify(citySearchInput));
+
+    
+      });
+    }
+  }   
+}
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//   renderUserInput();
+
+//   document.getElementById('first-button', 'second-button').addEventListener('click', function (event) {
+//     event.preventDefault();
+//     console.log("click first button");
+
+//     let city = document.getElementById('city').value;
+
+//     var citySearch = {
+//       citySearch: city,
+//     };
+
+//     if (city.trim() !== '') {
+//       let citySearchInput = JSON.parse(localStorage.getItem('citySearch')) || [];
+//       citySearchInput.push(citySearch);
+//       localStorage.setItem('citySearch', JSON.stringify(citySearchInput));
+//       renderUserInput();
+//     } else {
+//       console.error('Enter a city name');
+//       return;
+//     }
+
+//   });
+// });
+  
+
+  
+
+    
+
+
+
 
 
