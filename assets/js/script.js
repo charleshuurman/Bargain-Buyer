@@ -1,9 +1,8 @@
 // Gas API 
 var data = null;
-
 var xhr = new XMLHttpRequest();
 
-xhr.addEventListener("readystatechange", function () {
+xhr.addEventListener("readystatechange", function() {
     if (this.readyState === this.DONE) {
         console.log(this.responseText);
     }
@@ -23,7 +22,6 @@ function initMap(lat, lng) {
         zoom: 15,
     });
 
-    // Request to set markers for gas stations in the area 
     const request = {
         location: userInput,
         radius: '500',
@@ -43,29 +41,38 @@ function initMap(lat, lng) {
 
 function createMarker(place) {
     if (!place.name || !place.geometry.location) return;
-
     const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,
     });
-
     google.maps.event.addListener(marker, "click", () => {
         infowindow.setContent(place.name || "");
         infowindow.open(map);
     });
 }
 
-document.querySelector('#submit-button').addEventListener('click', function () {
-    let latitude = parseFloat(document.getElementById('latitude').value);
-    let longitude = parseFloat(document.getElementById('longitude').value);
+// Function to get latitude and longitude based on city name using Google Geocoding API
+function getLatLngFromCity(city) {
+    const apiKey = "AIzaSyBxWLcUfDyLG_YtaDZMM5GFhq5rCt7m7EM";
+    const apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${apiKey}`;
 
-    if (isNaN(latitude) || isNaN(longitude)) {
-        console.error("Please enter valid latitude and longitude values.");
-        return;
-    }
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.results && data.results.length > 0) {
+                const location = data.results[0].geometry.location;
+                document.getElementById('latitude').value = location.lat;
+                document.getElementById('longitude').value = location.lng;
 
-    initMap(latitude, longitude);
+                initMap(location.lat, location.lng);
+            }
+        })
+        .catch(error => console.error("Error fetching geocode data: ", error));
+}
+
+document.querySelector('#submit-button').addEventListener('click', function() {
+    const city = document.getElementById('city').value;
+    getLatLngFromCity(city); // Fetch latitude and longitude based on the city input
 });
 
 window.initMap = initMap; // Expose the initMap to the global scope as it's required by Google's callback
-

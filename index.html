@@ -32,6 +32,8 @@
             <div class="field">
                 <label class="label" id="instruction">Find nearby gas:</label>
                 <div class="control">
+                    <input class="input" id="city" type="text" placeholder="Enter City">
+
                     <input class="input" id="longitude" type="text" placeholder="Enter Longitude">
                     <input class="input" id="latitude" type="text" placeholder="Enter Latitude">
                     <button class="button is-link" id="submit-button">Submit</button>
@@ -42,12 +44,14 @@
         <!-- Map -->
         <div id="map-result" class="column"></div>
         <!-- Card for the Results -->
-        <section class="column">
-            <div id="result-text">
-                <p>Gasoline Price</p>
-                <output  id="gas-results" class="gas-results">$3.59 <!--placeholder--></output>
-            </div>
-        </section>
+<!-- Card for the Results -->
+<section class="column">
+    <div id="result-text">
+        <p>Gasoline Price</p>
+    </div>
+</section>
+
+
     </main>
 
     <!-- ID for the gas stations result that will be created with JS -->
