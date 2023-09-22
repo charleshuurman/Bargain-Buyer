@@ -7,77 +7,70 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <!-- Link to Bulma Framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
 </head>
 <body>
   <!-- NavBar -->
     <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <a class=“navbar-item”>
-        <img src=“https://bulma.io/images/bulma-logo.png”
-         alt=“Bulma: Free, open source, and modern CSS framework based on Flexbox”
-         width="112" height=“28”>
+      <a class="navbar-item">
+        <img src="https://bulma.io/images/bulma-logo.png"
+         alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
+         width="112" height="28">
        </a>
 
       <section class="hero is-primary">
         <div class="hero-body">
-          <p class="title">
-            </p>
+          <p class="title"></p>
           <p class="subtitle">
             <strong id="name">Gas Finder</strong>
           </p>
         </div>
       </section>
-      </nav>
-      <!-- Main Section of Gas FinderWebpage -->
-      <!-- Input Field -->
-      <main id="principal-section">
-      <section id="input-form">
-      <div class="field">
-        <label class="label" id="instruction">Find nearby gas:</label>
-        <div class="control" >
+    </nav>
+    <!-- Main Section of Gas FinderWebpage -->
+    <main id="principal-section" class="columns"> <!-- Add columns class for Flexbox -->
+        <!-- Input Field -->
+        <section id="input-form" class="column"> <!-- Add column class for Flexbox -->
+            <div class="field">
+                <label class="label" id="instruction">Find nearby gas:</label>
+                <div class="control">
+                    <input class="input" id="city" type="text" placeholder="Enter City Name">
+                    <button class="button is-link" id="first-button">Submit</button>
+                    <input class="input" id="longitude" type="text" placeholder="Enter Longitude">
+                    <button class="button is-link" id="second-button">Submit</button>
+                    <input class="input" id="latitude" type="text" placeholder="Enter Latitude">
+                    <button class="button is-link" id="third-button">Submit</button>
+                </div>
+                <p id="user-city"></p>
+            </div>
+        </section>
 
-          <input class="input" id="city" type="text" placeholder="Enter City Name">
-          <button class="button is-link" id="first-button">Submit</button>
-          <input class="input" id="longitude" type="text" placeholder="Enter Longitude">
-          <button class="button is-link" id="second-button">Submit</button>
-          <input class="input" id="latitude" type="text" placeholder="Enter Latitude">
-          <button class="button is-link" id="third-button">Submit</button>
-        </div> 
-
-        <!-- IDs for the Search Results History -->
-        <p id="user-city"></p>
-      <!-- Card for the Results-->
-      <div class="card">
-        <!-- ID for the gas stations result that will be created with JS -->
-          <div id="gasoline-text" class="media-content">
-             <p class="gasoline-text">Gasoline Price</p>
-          </div>
-  
-        <!-- ID for the gas prices result that will be created with JS -->
-        <div id="gas-results" class="gas-results">
-          <p> $3.59 <!--placeholder--></p>
-        </div>
-          
-          <div class="save-btn">
-            <footer class="save-btn">
-              <a href="#" class="card-footer-item">Save</a>
-            </footer>
-          </div>
-        </div>
-      </div>
-      </section>
-
+        <!-- Card for the Results -->
+        <section class="column"> <!-- Add column class for Flexbox -->
+            <div class="card">
+                <div id="gasoline-text" class="media-content">
+                    <p class="gasoline-text">Gasoline Price</p>
+                </div>
+                <div id="gas-results" class="gas-results">
+                    <p> $3.59 <!--placeholder--></p>
+                </div>
+                
+            </div>
+        </section>
     </main>
+    <div class="save-btn">
+      <footer class="save-btn">
+          <a href="#" class="card-footer-item">Save</a>
+      </footer>
+  </div>
+    <!-- ID for the map that will be created with JS -->
+    <div id="map-result"></div>
 
-      <!-- ID for the map that will be created with JS -->
-      <div id="map-result"></div>
+    <!-- ID for the gas stations result that will be created with JS -->
+    <div id="gas-stations"></div>
+    <!-- ID for the gas prices result that will be created with JS -->
+    <div id="gas-prices"></div>
 
-      <!-- ID for the gas stations result that will be created with JS -->
-      <div id="gas-stations"></div>
-      <!-- ID for the gas prices result that will be created with JS -->
-      <div id="gas-prices"></div>
-
-      <!-- Link to JS file -->
-      <script src="./assets/js/script.js"></script>
+    <!-- Link to JS file -->
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
