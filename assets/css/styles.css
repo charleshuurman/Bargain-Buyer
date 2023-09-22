@@ -1,8 +1,10 @@
+/* Element Selector */
 /* Styles the main section of the webpage */
 main {
-    background-color: rgb(7, 41, 68);
-    
+    background-color: rgb(7, 41, 68); 
 }
+
+/* Class Selector */
 /* Sets the placement and width of the NavBar */
 .hero {
     width: 100%;
@@ -14,11 +16,7 @@ main {
     
 }
 
-.field {
-    margin-top: 30%;
-    margin-left: 25%;
-}
-
+/* ID Selectors */
 /* Styles the text in the header */
 #name {
     font-size: 65px;
@@ -34,76 +32,89 @@ main {
     font-size: 30px;
     margin-left: 12px;
     color: rgb(206, 231, 65);
-    
-
 }
 
-/* Styles the input forms */
+/* Class Selector */
+/* Sets the margins of the input form and submit button in relation to the body */
+.field {
+    margin-top: 30%;
+    margin-left: 25%;
+}
+
+/* ID Selectors */
+/* Sets the margins for the input form and the submit button */
 #input-form {
     margin-top: 10px;
     margin-left: 50px;
-} 
+}
 
+/* Class Selector */
+/* Sets the width of the input boxes */
+.control {
+    width: 40%;
+}
+
+/* ID Selectors */
+/* Styles the submit button */
 #submit-button {
     background-color: rgb(143, 209, 79);
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    
 }
 
-/* Sets styling of longitude parameter*/
-
+/* Sets styling of longitude parameter */
 #longitude {
     margin-bottom: 5px;
     margin-left: 15px;
     background-color: rgb(250, 250, 181);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-/*sets styling for latitude parameter*/
+
+/* Sets styling for latitude parameter */
 #latitude {
     margin-left: 15px;
     background-color: rgb(250, 250, 181);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-/* Sets the width of the input boxes */
-.control {
-    width: 30%;
-}
 
-/* Sets space between the input boxes and the buttons */
+/* Class Selector */
+/* Sets margin between the last input box and the button */
 .button {
     margin-top: 5px;
 }
 
-/*Submit button*/
-
+/* Id Selector */
+/* Sets styling for submit button */
 #submit-button {
     height: 30px;
     width: 140px;
     margin-left: 15px;
 }
 
+/* Class Selector */
+/* NOTE: this styling does not seem to apply to any element on page. Remove it? */
 .card {
     align-items: right;
 }
 
-/*Styling for results text & box*/
+/* ID Selectors */
+/* Styling for results text & box */
 #result-text {
- background-color: rgb(143, 209, 79);
-color: black;
- max-width: 30%;
- display: flex;
- align-items: center;
-flex-direction: row;
-justify-content: space-between;
-border-radius: 5px;
-padding-left: 4%;
-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-margin-top: 45%;
-margin-left: 30%;
+    background-color: rgb(143, 209, 79);
+    color: black;
+    max-width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding-left: 4%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-top: 45%;
+    margin-left: 30%;
 }
 
-/*styling for results box*/
+/* Styling for results box */
 #gas-results {
     background-color: rgb(50, 180, 240);
     border-top-right-radius: 5px;
@@ -113,7 +124,13 @@ margin-left: 30%;
     color: black;
 }
 
-/*Rounds the corners of the map*/
+/* Styles the user input that is displayed to the screen */
+#user-city {
+    color: white;
+    font-weight: bold;
+}
+
+/* Rounds the corners of the map */
 #map-result {
     margin-block: 2%;
     width: 250px;
