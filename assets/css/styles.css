@@ -128,6 +128,8 @@ main {
 #user-city {
     color: white;
     font-weight: bold;
+    margin-top: 10px;
+    margin-left: 23px;
 }
 
 /* Rounds the corners of the map */
