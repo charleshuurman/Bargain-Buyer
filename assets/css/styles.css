@@ -42,7 +42,7 @@ main {
 
 /* Sets the width of the input boxes */
 .control {
-    width: 15%;
+    width: 20%;
 }
 
 /* Sets space between the input boxes and the buttons */
@@ -54,7 +54,9 @@ main {
 #first-button,
 #second-button,
 #third-button {
-    margin-bottom: 10px;
+    margin-bottom: 18px;
+    height: 30px;
+    width: 147px;
 }
 
 .card {
