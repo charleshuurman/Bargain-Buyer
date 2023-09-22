@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +9,26 @@
     <!-- Link to Bulma Framework -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
-<body>
-  <!-- NavBar -->
-    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
-      <a class="navbar-item">
-        <img src="https://bulma.io/images/bulma-logo.png"
-         alt="Bulma: Free, open source, and modern CSS framework based on Flexbox"
-         width="112" height="28">
-       </a>
 
-      <section class="hero is-primary">
-        <div class="hero-body">
-          <p class="title"></p>
-          <p class="subtitle">
-            <strong id="name">Gas Finder</strong>
-          </p>
-        </div>
-      </section>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+        <a class="navbar-item">
+            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: Free, open source, and modern CSS framework based on Flexbox" width="112" height="28">
+        </a>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <p class="title"></p>
+                <p class="subtitle">
+                    <strong id="name">Gas Finder</strong>
+                </p>
+            </div>
+        </section>
     </nav>
     <!-- Main Section of Gas FinderWebpage -->
-    <main id="principal-section" class="columns"> <!-- Add columns class for Flexbox -->
+    <main id="principal-section" class="columns">
         <!-- Input Field -->
-        <section id="input-form" class="column"> <!-- Add column class for Flexbox -->
+        <section id="input-form" class="column">
             <div class="field">
                 <label class="label" id="instruction">Find nearby gas:</label>
                 <div class="control">
@@ -41,21 +40,18 @@
                 <p id="user-city"></p>
             </div>
         </section>
-
+        <!-- Map -->
+        <div id="map-result" class="column"></div>
         <!-- Card for the Results -->
-        <section class="column"> <!-- Add column class for Flexbox -->
-          <div id="result-text">
-              <p class="gasoline-text">Gasoline Price</p>
-          </div>
-          <div id="gas-results" class="gas-results">
-              <output>$3.59 <!--placeholder--> </output> 
-          </div>
-  </section>
-</main>
-
-  </div>
-    <!-- ID for the map that will be created with JS -->
-    <div id="map-result"></div>
+        <section class="column">
+            <div id="result-text">
+                <p class="gasoline-text">Gasoline Price</p>
+            </div>
+            <div id="gas-results" class="gas-results">
+                <output>$3.59 <!--placeholder--></output>
+            </div>
+        </section>
+    </main>
 
     <!-- ID for the gas stations result that will be created with JS -->
     <div id="gas-stations"></div>
@@ -65,8 +61,9 @@
     <!-- Link to JS file -->
     <script src="./assets/js/script.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCU88XU17Z9qY2n9kpr2IqOnUg5Ps68kFk&callback=initMap&libraries=places&v=weekly">
-      defer
+        defer
     </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 </body>
+
 </html>
