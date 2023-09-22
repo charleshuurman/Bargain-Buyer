@@ -68,3 +68,9 @@ main {
 #gas-results {
     background-color: grey;
 }
+
+#map-result {
+    height: 300px;
+    width: 250px;
+    
+}

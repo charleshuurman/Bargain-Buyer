@@ -29,22 +29,22 @@ let infowindow;
 
 function initMap() {
   //const userInput = new google.maps.LatLng({userLat}, {userLon});
-  const userInput = new google.maps.LatLng(30.266666, -97.733330);
+  const userInput = new google.maps.LatLng(32.779167, -96.808891);
   // Set Austin as test center
 
   infowindow = new google.maps.InfoWindow();
-  map = new google.maps.Map(document.getElementById("map"), {
+  map = new google.maps.Map(document.getElementById("map-result"), {
     center: userInput,
     zoom: 15,
   });
 
   // unfinished request that will set markers for gas stations in the area 
-/*
+
   const request = {
     query: "Gas station",
     fields: ["name"],
   };
-*/
+
   service = new google.maps.places.PlacesService(map);
   service.findPlaceFromQuery(request, (results, status) => {
     if (status === google.maps.places.PlacesServiceStatus.OK && results) {
@@ -52,17 +52,17 @@ function initMap() {
         createMarker(results[i]);
       }
 
-      map.setCenter(results[0].geometry.location);
+      map.setCenter(results[0].name.location);
     }
   });
 }
 
 function createMarker(place) {
-  if (!place.geometry || !place.geometry.location) return;
+  if (!place.name || !place.name.location) return;
 
   const marker = new google.maps.Marker({
     map,
-    position: place.geometry.location,
+    position: place.name.location,
   });
 
   google.maps.event.addListener(marker, "click", () => {
@@ -139,12 +139,5 @@ window.onload = function() {
 //   });
 // });
   
-
-  
-
-    
-
-
-
-
+//fetch("https://api.collectapi.com/gasPrice/fromCoordinates?lng=-95.358421&lat=29.749907")
 
