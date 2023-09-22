@@ -35,8 +35,7 @@ main {
 } 
 
 #first-button, 
-#second-button, 
-#third-button {
+#second-button {
     background-color: rgb(143, 209, 79);
 }
 
@@ -51,9 +50,9 @@ main {
 }
 
 /* Sets the bottom margin */
+
 #first-button,
-#second-button,
-#third-button {
+#second-button {
     margin-bottom: 18px;
     height: 30px;
     width: 147px;
