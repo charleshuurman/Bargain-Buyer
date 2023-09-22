@@ -76,3 +76,48 @@ document.querySelector('#submit-button').addEventListener('click', function() {
 });
 
 window.initMap = initMap; // Expose the initMap to the global scope as it's required by Google's callback
+
+// function to render user input
+const button = document.querySelector('#submit-button');
+
+function renderUserInput() {
+  let citySearchInput = JSON.parse(localStorage.getItem('citySearch'));
+  let cityHistory = document.getElementById('user-city');
+
+  if (citySearchInput !== null) {
+    cityHistory.innerHTML = '';
+
+    citySearchInput.forEach(function (citySearch) {
+      let cityItem = document.createElement('p');
+      cityItem.textContent = citySearch.citySearch;
+      cityHistory.appendChild(cityItem);
+    });
+  } 
+}
+
+// event listener for submit button
+document.addEventListener('DOMContentLoaded', function () {
+  renderUserInput();
+
+  document.getElementById('submit-button').addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log("click submit button");
+
+    let city = document.getElementById('city').value;
+
+    var citySearch = {
+      citySearch: city,
+    };
+
+    if (city.trim() !== '') {
+      let citySearchInput = JSON.parse(localStorage.getItem('citySearch')) || [];
+      citySearchInput.push(citySearch);
+      localStorage.setItem('citySearch', JSON.stringify(citySearchInput));
+      renderUserInput();
+    } else {
+      console.error('Enter a city name');
+      return;
+    }
+
+  });
+});
