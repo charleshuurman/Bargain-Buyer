@@ -116,7 +116,7 @@ window.onload = function() {
 // document.addEventListener('DOMContentLoaded', function () {
 //   renderUserInput();
 
-//   document.getElementById('first-button', 'second-button').addEventListener('click', function (event) {
+//   document.getElementById('first-button').addEventListener('click', function (event) {
 //     event.preventDefault();
 //     console.log("click first button");
 

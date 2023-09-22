@@ -32,16 +32,26 @@ main {
 /* Styles the input forms */
 #input-form {
     margin-top: 10px;
+    margin-left: 50px;
 } 
 
-#first-button, 
-#second-button {
+#submit-button {
     background-color: rgb(143, 209, 79);
 }
 
+/* Sets the bottom margin of the longitude input box */
+
+#longitude {
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+#latitude {
+    margin-left: 15px;
+}
 /* Sets the width of the input boxes */
 .control {
-    width: 20%;
+    width: 30%;
 }
 
 /* Sets space between the input boxes and the buttons */
@@ -51,11 +61,10 @@ main {
 
 /* Sets the bottom margin */
 
-#first-button,
-#second-button {
-    margin-bottom: 18px;
+#submit-button {
     height: 30px;
-    width: 147px;
+    width: 140px;
+    margin-left: 15px;
 }
 
 .card {
