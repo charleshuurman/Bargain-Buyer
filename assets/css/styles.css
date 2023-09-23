@@ -4,6 +4,15 @@ main {
     background-color: rgb(7, 41, 68); 
 }
 
+/*Styles the "Gas Finder" Title Image*/
+#gas-image {
+    display: block;
+    margin-left: 28%;
+    width: 50%;
+    width: 680px;
+    height: 500px;
+}
+
 /* Class Selector */
 /* Sets the placement and width of the NavBar */
 .hero {
@@ -12,18 +21,18 @@ main {
     padding-left: 0px;
     height: 150px;
     /* Leaving the box-shadow creates the grey line between the NavBar and the main section of the webpage. Thoughts? */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;  
 }
 
+
 /* ID Selectors */
-/* Styles the text in the header */
+/* Styles the name in the header */
 #name {
     font-size: 65px;
     float: none;
     position: absolute;
     top: 20%;
-    left: 35%;
+    left: 42%;
     color: rgb(26, 26, 26)
 }
 
@@ -61,6 +70,13 @@ main {
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+
+#city {
+    margin-left: 15px;
+    background-color: rgb(250, 250, 181);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
 
 /* Sets styling of longitude parameter */
 #longitude {
@@ -112,13 +128,14 @@ main {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-top: 45%;
     margin-left: 30%;
+    
 }
 
 /* Styling for results box */
 #gas-results {
     background-color: rgb(50, 180, 240);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
     padding-right: 2%;
     padding-left: 2%;
     color: black;
@@ -128,8 +145,15 @@ main {
 #user-city {
     color: white;
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: 23px;
+    background-color: rgb(50, 180, 240);
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+    border-radius: 5px;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-style: solid;
+    border-color: rgb(40, 64, 92);
+
 }
 
 /* Rounds the corners of the map */
@@ -137,7 +161,10 @@ main {
     margin-block: 2%;
     width: 250px;
     height: 600px; 
-    border-radius: 5%;
+    border-radius: 50%;
     background: #4679BD;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-style: solid;
+    border-color: rgb(206, 231, 65)
+
 }
