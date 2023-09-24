@@ -33,7 +33,7 @@
                 <label class="label" id="instruction">Find nearby gas:</label>
                 <div class="control">
                     <input class="input" id="city" type="text" placeholder="Enter City">
-                    <input class="input" id="longitude" type="text" placeholder="Enter Longitude">
+                    <input class="input" id="longitude" type="text" placeholder="Enter Latitude">
                     <input class="input" id="latitude" type="text" placeholder="Enter Latitude">
                     <button class="button is-link" id="submit-button">Submit</button>
                 </div>
@@ -45,8 +45,13 @@
         <!-- Card for the Results -->
 <!-- Card for the Results -->
 <section class="column">
-    <div id="result-text">
+    <div id="result-text" >
         <p>Gasoline Price</p>
+    </div>
+    <div class="control">
+        <input class="input" id="diesel" type="number" step="0.001" placeholder="diesel"><p>Diesel</p>
+        <input class="input" id="gasoline" type="number" step="0.001" placeholder="Gasoline"><p>Gasoline</p>
+        <input class="input" id="midGrade" type="number" step="0.001" placeholder="midGrade"><p>MidGrade</p>
     </div>
 </section>
 
