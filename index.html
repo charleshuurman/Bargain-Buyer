@@ -37,7 +37,7 @@
                     <input class="input" id="latitude" type="text" placeholder="Enter Latitude">
                     <button class="button is-link" id="submit-button">Submit</button>
                 </div>
-                <p id="user-city"></p>
+
             </div>
         </section>
         <!-- Map -->
@@ -48,11 +48,18 @@
     <div id="result-text" >
         <p>Gasoline Price</p>
     </div>
-    <div class="control">
-        <input class="input" id="diesel" type="number" step="0.001" placeholder="diesel"><p>Diesel</p>
+    <div class="control" id="result-box">
+        <input class="input" id="diesel" type="number" step="0.001" placeholder="Diesel"><p>Diesel</p>
         <input class="input" id="gasoline" type="number" step="0.001" placeholder="Gasoline"><p>Gasoline</p>
-        <input class="input" id="midGrade" type="number" step="0.001" placeholder="midGrade"><p>MidGrade</p>
-    </div>
+        <input class="input" id="midGrade" type="number" step="0.001" placeholder="MidGrade"><p>MidGrade</p>
+        
+        <header class="history">
+            <h1>Search History</h1>
+        </header>
+
+        <div style="width:150px;height:150px;line-height:3em;overflow:auto;padding:5px;color: rgb(255, 255, 255);" id="scroll">
+            <p id="user-city"></p>
+        </div>
 </section>
 
 
@@ -72,3 +79,5 @@
 </body>
 
 </html>
+
+
