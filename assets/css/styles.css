@@ -28,8 +28,8 @@ main {
 }
 
 /*Styles the logo on top of the application*/
-img{
-    margin-top: 1%;
+img {
+    margin-bottom: 20px;
     margin-left: 37%;
     width: 500px;
 }
@@ -123,7 +123,7 @@ img{
     flex-direction: row;
     justify-content: space-between;
     border-radius: 5px;
-    padding-left: 6.7%;
+    padding-left: 3.9%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-top: 10%;
     margin-left: 30%;
@@ -191,6 +191,62 @@ img{
     background-color: rgb(50, 180, 240);
     color: rgb(0, 0, 0);
     border-radius: 5px;
-    max-width: 60%;
+    max-width: 67%;
     padding-left: 5.1%;
 }
+
+/* Makes the instructions text and input form responsive to change */
+@media (min-width: 300px) {
+    .field {
+        margin-left: 90px;
+    }
+  }
+  
+/* Makes the map responsive to window resizing */
+@media (min-width: 300px) {
+    #map-result {
+        margin-left: 110px;
+        width: 60%
+    }
+  
+  }
+
+  @media (min-width: 1025px) {
+    #map-result {
+        margin-left: 80px;
+    }
+  }
+
+   /* Makes the Gasoline Price text (and box) and Gas results responsive to window resizing */
+   @media (min-width: 300px) {
+    .column,
+    #result-text,
+    #result-box {
+        margin-left: 70px;
+    }
+  #gasoline-text {
+    padding-left: 4px;
+  }
+  }
+
+  /* Makes the Gasoline Price text responsive to screen resize */
+  @media (min-width: 1025px) {
+    #gasoline-text {
+        padding-left: 1px;
+    }
+  }
+
+  /* Makes the logo image responsive to screen resize */
+  @media (min-width: 300px) {
+    #img {
+        max-width: 50%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+
+    }
+  }
+
+ 
