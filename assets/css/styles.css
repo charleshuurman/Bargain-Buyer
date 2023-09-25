@@ -105,7 +105,7 @@ img{
 /* Sets styling for submit button */
 #submit-button {
     height: 40px;
-    width: 143.59px;
+    width: 140px;
     background-color: rgb(143, 209, 79);
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -117,13 +117,13 @@ img{
 #result-text {
     background-color: rgb(50, 180, 240);
     color: rgb(0, 0, 0);
-    max-width: 40%;
+    max-width: 53%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     border-radius: 5px;
-    padding-left: 4%;
+    padding-left: 6.7%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-top: 10%;
     margin-left: 30%;
@@ -133,7 +133,7 @@ img{
 /* Class Selector */
 /* Sets the width of the input boxes */
 .control {
-    width: 40%;
+    width: 53%;
     margin-bottom: 5%;
 }
 
@@ -187,11 +187,10 @@ img{
 /*Styles "Search History" header*/
 .history{
     margin-top: 20%;
-    font-size: 20px;
+    font-size: 19px;
     background-color: rgb(50, 180, 240);
     color: rgb(0, 0, 0);
     border-radius: 5px;
-    max-width: 63%;
-    padding-left: 5%;
-    font-size: 20px;
+    max-width: 60%;
+    padding-left: 5.1%;
 }
