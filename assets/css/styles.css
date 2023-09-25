@@ -7,6 +7,7 @@ main {
     padding-bottom: 7.5%;
 }
 
+
 /* Centering the modal content */
 .modal-content {
     display: flex;
@@ -21,10 +22,7 @@ main {
     width: 100%;
     margin-left: 0px;
     padding-left: 0px;
-    height: 150px;
-    /* Leaving the box-shadow creates the grey line between the NavBar and the main section of the webpage. Thoughts? */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-    
+    height: 150px;  
 }
 
 /*Styles the logo on top of the application*/
@@ -192,7 +190,7 @@ img {
     color: rgb(0, 0, 0);
     border-radius: 5px;
     max-width: 67%;
-    padding-left: 5.1%;
+    padding-left: 4.2%;
 }
 
 /* Makes the instructions text and input form responsive to change */
@@ -225,8 +223,22 @@ img {
         margin-left: 70px;
     }
   #gasoline-text {
-    padding-left: 4px;
+    padding-left: 9px;
+   }
   }
+
+  /* Makes the Search History box and text responsive to screen resize */
+  @media (min-width: 300px) {
+    .history {
+        width: 61%;
+        margin-left: 2px;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .history {
+        width: 65%;
+    }
   }
 
   /* Makes the Gasoline Price text responsive to screen resize */
