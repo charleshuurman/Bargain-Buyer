@@ -146,29 +146,8 @@ img{
     color: white;
 }
 
-/*styles the individual output boxes*/
-#diesel {
-    font-weight: bold;
-    color: antiquewhite;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: rgb(48, 48, 27);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-
-/* Styles the text of the results for gasoline */
-#gasoline {
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    color: antiquewhite;
-    background-color: rgb(48, 48, 27);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
 /* Styles the text of the results for mid grade */
-#midGrade {
+#midGrade, #premium, #gasoline, #diesel {
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 5px;
