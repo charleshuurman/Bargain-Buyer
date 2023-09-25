@@ -17,6 +17,7 @@ function initMap(lat, lng) {
     map = new google.maps.Map(document.getElementById("map-result"), {
         center: userInput,
         zoom: 15,
+        
     });
 
     // Construct a request to search for gas stations around the user's location
@@ -51,6 +52,7 @@ function createMarker(place) {
     const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,
+        icon: "./assets/images/station-marker.png"
     });
     
     // Attach an event listener to open an info window with the place's name when the marker is clicked
@@ -107,6 +109,7 @@ function fetchGasPrices(longitude, latitude) {
                 document.getElementById("diesel").value = response.result.diesel;
                 document.getElementById("gasoline").value = response.result.gasoline;
                 document.getElementById("midGrade").value = response.result.midGrade;
+                document.getElementById("premium").value = response.result.premium;
             } else {
                 console.error("Error in fetching gas prices:", response.message);
             }
