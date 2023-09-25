@@ -102,13 +102,6 @@ img{
     color: black;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
-
-}
-
-/* Class Selector */
-/* NOTE: this styling does not seem to apply to any element on page. Remove it? */
-.card {
-    align-items: right;
 }
 
 /* ID Selectors */
