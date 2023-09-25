@@ -43,23 +43,24 @@ The "Gas Station Locator Web App" is designed to assist users in finding gas sta
 
 ## Installation
 
-1. Clone the repository to your local machine.
+1. Clone the repository https://github.com/charleshuurman/Gas-Finder to your local machine.
 2. Navigate to the project directory.
 3. Ensure you have API keys for both Google Maps and CollectAPI Gas Prices.
 
 ## Usage
 
-1. Open the app in your preferred web browser.
+1. Open the app in your preferred web browser and go to: https://charleshuurman.github.io/Gas-Finder/
 2. Enter a city name and coordinates in the provided fields.
 3. Click on the "Submit" button.
 4. View the map displaying gas stations with associated price information.
 
-![Example Usage](assets/screenshot.png)
+![Example Usage](assets/images/Last.mov)
 
 ## Credits
-
+- [Google Geocoding API](https://www.collectapi.com/api/gasPrice/gas-prices-api/fromCoordinates)
 - [Google Maps Place Search](https://developers.google.com/maps/documentation/javascript/examples/place-search)
 - [CollectAPI Gas Prices](https://www.collectapi.com/api/gasPrice/gas-prices-api)
+
 
 **Collaborators**: 
 - Cara Rosa [CaraRosa](https://github.com/CaraRosa)
