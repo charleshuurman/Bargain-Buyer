@@ -2,6 +2,9 @@
 /* Styles the main section of the webpage */
 main {
     background-color: rgb(7, 41, 68); 
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 7.5%;
 }
 
 /* Class Selector */
@@ -16,6 +19,14 @@ main {
     
 }
 
+/*Styles the logo on top of the application*/
+img{
+    margin-top: 1%;
+    margin-left: 37%;
+    width: 500px;
+}
+
+
 /* ID Selectors */
 /* Styles the text in the header */
 #name {
@@ -24,8 +35,11 @@ main {
     position: absolute;
     top: 20%;
     left: 41%;
-    color: rgb(26, 26, 26)
+    color: rgb(26, 26, 26);
+    font-family: fantasy;
+
 }
+
 
 /* Styles the text that informs the user */
 #instruction {
