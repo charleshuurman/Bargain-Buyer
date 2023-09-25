@@ -5,6 +5,19 @@ let map;
 let service;
 let infowindow;
 
+// Function to show the modal
+function showModal() {
+    const modal = document.getElementById('loading-modal');
+    modal.classList.add('is-active');
+}
+
+// Function to hide the modal
+function hideModal() {
+    const modal = document.getElementById('loading-modal');
+    modal.classList.remove('is-active');
+}
+
+
 // Function to setup the Google Map with provided latitude and longitude
 function initMap(lat, lng) {
     // Convert user input to Google Maps latitude and longitude object
@@ -89,6 +102,11 @@ function getLatLngFromCity(city) {
 // ---API To FETCH GAS PRIZES BY COORDINATES ----
 // Function to fetch gas prices based on given coordinates
 function fetchGasPrices(longitude, latitude) {
+
+    showModal();  // Show the modal when you start fetching the data
+     // Create a new XMLHttpRequest to fetch data
+     var xhr = new XMLHttpRequest();
+
     // Create a new XMLHttpRequest to fetch data
     var xhr = new XMLHttpRequest();
     xhr.open("GET", `https://api.collectapi.com/gasPrice/fromCoordinates?lng=${longitude}&lat=${latitude}`);
@@ -122,6 +140,9 @@ function fetchGasPrices(longitude, latitude) {
 
     // Send the actual request
     xhr.send();
+
+    // Automatically hide the modal after 4 seconds
+    setTimeout(hideModal, 3000);
 }
 
 // Attach event listeners when the document is fully loaded
