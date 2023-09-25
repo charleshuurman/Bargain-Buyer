@@ -54,7 +54,7 @@ The "Gas Station Locator Web App" is designed to assist users in finding gas sta
 3. Click on the "Submit" button.
 4. View the map displaying gas stations with associated price information.
 
-![Example Usage](assets/images/Last.mov)
+![Example Usage](assets/images/web.png)
 
 ## Credits
 - [Google Geocoding API](https://www.collectapi.com/api/gasPrice/gas-prices-api/fromCoordinates)
