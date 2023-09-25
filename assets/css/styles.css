@@ -7,6 +7,14 @@ main {
     padding-bottom: 7.5%;
 }
 
+/* Centering the modal content */
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 /* Class Selector */
 /* Sets the placement and width of the NavBar */
 .hero {
