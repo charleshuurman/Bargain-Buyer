@@ -101,6 +101,11 @@ function getLatLngFromCity(city) {
         .catch(error => console.error("Error fetching geocode data: ", error));
 }
 
+// Disable the input fields
+document.getElementById("longitude").disabled = true;
+document.getElementById("latitude").disabled = true;
+
+
 // ---API To FETCH GAS PRIZES BY COORDINATES ----
 // Function to fetch gas prices based on given coordinates
 function fetchGasPrices(longitude, latitude) {
@@ -114,7 +119,7 @@ function fetchGasPrices(longitude, latitude) {
     xhr.open("GET", `https://api.collectapi.com/gasPrice/fromCoordinates?lng=${longitude}&lat=${latitude}`);
     // Set necessary headers for the request
     xhr.setRequestHeader("content-type", "application/json");
-    xhr.setRequestHeader("authorization", "apikey 7GJVlqXVuq9qMhrhXarDHo:5qg7T2IPKctIp3WMa08pWZ");
+    xhr.setRequestHeader("authorization", "apikey 3jiKkTUww2sYWYSWb67hvk:4zGHSMHwyJusfb0c5qSriY");
 
     // Process the response when data loading is complete
     xhr.onload = function() {
@@ -135,6 +140,11 @@ function fetchGasPrices(longitude, latitude) {
             console.error("Failed to retrieve gas prices.");
         }
     };
+// Disable fields
+document.getElementById("diesel").disabled = true;
+document.getElementById("gasoline").disabled = true;
+document.getElementById("midGrade").disabled = true;
+document.getElementById("premium").disabled = true;
 
     // Log any errors that occur during the data fetching process
     xhr.onerror = function() {
@@ -145,7 +155,7 @@ function fetchGasPrices(longitude, latitude) {
     xhr.send();
 
     // Automatically hide the modal after 4 seconds
-    setTimeout(hideModal, 3000);
+    setTimeout(hideModal, 4000);
 }
 
 // Attach event listeners when the document is fully loaded
