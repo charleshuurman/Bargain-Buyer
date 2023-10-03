@@ -126,7 +126,6 @@ function fetchGasPrices(longitude, latitude) {
         // If the request was successful, update the UI with the received data
         if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
-            console.log(response);
 
             if (response.success && response.result) {
                 document.getElementById("diesel").value = response.result.diesel;

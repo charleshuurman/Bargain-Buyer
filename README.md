@@ -75,7 +75,7 @@ The "Gas Station Locator Web App" is designed to assist users in finding gas sta
 
 ## License
 
-This project is licensed under the MIT License. 
+No license is applied.
 
 ---
 
