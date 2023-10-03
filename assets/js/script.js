@@ -119,7 +119,7 @@ function fetchGasPrices(longitude, latitude) {
     xhr.open("GET", `https://api.collectapi.com/gasPrice/fromCoordinates?lng=${longitude}&lat=${latitude}`);
     // Set necessary headers for the request
     xhr.setRequestHeader("content-type", "application/json");
-    xhr.setRequestHeader("authorization", "apikey 3jiKkTUww2sYWYSWb67hvk:4zGHSMHwyJusfb0c5qSriY");
+    xhr.setRequestHeader("authorization", "apikey 3BjTdOPQ6y0qWajVcTlYLy:2WhvLI2tcc1OILDPa5Ku2n");
 
     // Process the response when data loading is complete
     xhr.onload = function() {
