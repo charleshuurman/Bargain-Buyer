@@ -61,7 +61,6 @@ img {
 }
 
 /* ID Selectors */
-/* Sets the margins for the input form and the submit button */
 #input-form {
     margin-top: 10px;
     margin-left: 50px;
@@ -94,13 +93,22 @@ img {
 }
 
 /* Class Selector */
-/* Sets margin between the last input box and the button */
 .button {
     margin-top: 15px;
 }
 
+.results {
+    background-color: lightgray; 
+    border: none; 
+    padding: 8px; 
+    font-size: 16px; 
+}
+
+.label2 {
+    color: rgba(240, 248, 255, 0.673);
+}
+
 /* Id Selector */
-/* Sets styling for submit button */
 #submit-button {
     height: 40px;
     width: 140px;
@@ -110,8 +118,7 @@ img {
 
 }
 
-/* ID Selectors */
-/* Styling for results text & box */
+
 #result-text {
     background-color: rgb(50, 180, 240);
     color: rgb(0, 0, 0);
@@ -122,21 +129,19 @@ img {
     justify-content: space-between;
     border-radius: 5px;
     padding-left: 3.9%;
+    padding-right: 3.9%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     margin-top: 10%;
     margin-left: 30%;
-    font-size: 30px;
+    font-size: 22px;
 }
 
 /* Class Selector */
-/* Sets the width of the input boxes */
 .control {
     width: 53%;
     margin-bottom: 5%;
 }
 
-/* ID Selectors */
-/*Styles the output text labeling the gas type*/
 #result-box {
     font-weight: bold;
     margin-top: 3%;
@@ -157,7 +162,7 @@ img {
 /* Rounds the corners of the map */
 #map-result {
     margin-block: 2%;
-    width: 250px;
+    width: 100%;
     height: 600px; 
     border-radius: 50%;
     background: #4679BD;
@@ -203,15 +208,15 @@ img {
 /* Makes the map responsive to window resizing */
 @media (min-width: 300px) {
     #map-result {
-        margin-left: 110px;
-        width: 60%
+        margin-left: 5px;
+        width: 100%
     }
   
   }
 
   @media (min-width: 1025px) {
     #map-result {
-        margin-left: 80px;
+        margin-left: 5px;
     }
   }
 
