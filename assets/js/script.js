@@ -5,6 +5,12 @@ let map;
 let service;
 let infowindow;
 
+// Disable fields
+document.getElementById("diesel").disabled = true;
+document.getElementById("gasoline").disabled = true;
+document.getElementById("midGrade").disabled = true;
+document.getElementById("premium").disabled = true;
+
 // Function to show the modal
 function showModal() {
     const modal = document.getElementById('loading-modal');
@@ -119,7 +125,7 @@ function fetchGasPrices(longitude, latitude) {
     xhr.open("GET", `https://api.collectapi.com/gasPrice/fromCoordinates?lng=${longitude}&lat=${latitude}`);
     // Set necessary headers for the request
     xhr.setRequestHeader("content-type", "application/json");
-    xhr.setRequestHeader("authorization", "apikey 3BjTdOPQ6y0qWajVcTlYLy:2WhvLI2tcc1OILDPa5Ku2n");
+    xhr.setRequestHeader("authorization", "apikey 08VbL3jN1gp2ATqNQtFypp:2TsHZX1IoAjbTJgk7nxLML");
 
     // Process the response when data loading is complete
     xhr.onload = function() {
@@ -139,11 +145,6 @@ function fetchGasPrices(longitude, latitude) {
             console.error("Failed to retrieve gas prices.");
         }
     };
-// Disable fields
-document.getElementById("diesel").disabled = true;
-document.getElementById("gasoline").disabled = true;
-document.getElementById("midGrade").disabled = true;
-document.getElementById("premium").disabled = true;
 
     // Log any errors that occur during the data fetching process
     xhr.onerror = function() {
